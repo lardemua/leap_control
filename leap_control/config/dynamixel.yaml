@@ -1,0 +1,25 @@
+port_name: '/dev/ttyUSB0'
+baudrate: 4000000
+protocol_version: 2.0
+
+pwd_limit: 885
+current_limit: 1800
+velocity_limit: 350
+
+operating_mode: "current-based position"
+
+pos_res: 0.0015343541
+vel_res: 0.2288857142
+effort_res: 0.000517
+
+vel_i_gain: 1600
+vel_p_gain: 50
+pos_d_gain: 1900
+pos_i_gain: 0
+pos_p_gain: 2100
+
+goal_pwm: 885
+goal_current: 500
+profile_velocity: 100
+
+neutral_pos: 2048

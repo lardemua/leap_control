@@ -1,0 +1,32 @@
+# MoveIt uses this configuration for controller management
+
+planning_pipelines:
+  pipeline_names: ["ompl"]
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - hand_controller
+
+  hand_controller:
+    type: FollowJointTrajectory
+    joints:
+      - index_pip_flex_joint
+      - index_pip_abb_joint
+      - index_mcp_joint
+      - index_dip_joint
+      - middle_pip_flex_joint
+      - middle_pip_abb_joint
+      - middle_mcp_joint
+      - middle_dip_joint
+      - ring_pip_flex_joint
+      - ring_pip_abb_joint
+      - ring_mcp_joint
+      - ring_dip_joint
+      - thumb_cmc_abb_joint
+      - thumb_cmc_flex_joint
+      - thumb_mcp_joint
+      - thumb_ip_joint
+    action_ns: follow_joint_trajectory
+    default: true
